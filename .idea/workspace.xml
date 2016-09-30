@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2c4c022-607d-4fcb-ad1d-3133076966b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.js" afterPath="$PROJECT_DIR$/web.js" />
-    </list>
+    <list default="true" id="a2c4c022-607d-4fcb-ad1d-3133076966b8" name="Default" comment="" />
     <ignored path="LearnAngular.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -359,12 +357,12 @@
       <workItem from="1475079083298" duration="1203000" />
       <workItem from="1475116757860" duration="5696000" />
       <workItem from="1475202635491" duration="7909000" />
-      <workItem from="1475258557484" duration="1732000" />
+      <workItem from="1475258557484" duration="1836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17760000" />
+    <option name="totallyTimeSpent" value="17864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1869" height="1056" extended-state="6" />
