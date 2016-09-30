@@ -21,13 +21,26 @@ angular
     'ngMaterial',
     'ui.router'
   ])
-  .constant('appConfig', {
-    'prod': false,
-    'testUrl': 'http://localhost:8085',
-    'prodUrl': 'http://dashboard.int.yolphin.com',
-    'api': '/api/v1/admin',
-    'cliendID': 'd3d3565b-a1d4-4565-9a73-69b7856ce6a0'
-  })
+  .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('tab1', {
+      url: '/tab1',
+      controller: 'AboutCtrl',
+      templateUrl: 'views/about.html'
+      })
+      .state('tab2', {
+      url: '/tab2',
+      controller: 'MainCtrl',
+      templateUrl: 'views/main.html'
+      })
+      .state('tab3', {
+        url: '/tab3',
+        controller: 'AboutCtrl',
+        templateUrl: 'views/about.html'
+      });
+  }]);
   // .config(['$mdThemingProvider', '$httpProvider', function ($mdThemingProvider, $httpProvider) {
   //   $mdThemingProvider.theme('default')
   //     .primaryPalette('blue-grey')
@@ -35,19 +48,19 @@ angular
   //   $mdThemingProvider.theme('light-theme')
   //     .primaryPalette('blue-grey')
   // }])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  // .config(function ($routeProvider) {
+  //   $routeProvider
+  //     .when('/', {
+  //       templateUrl: 'views/main.html',
+  //       controller: 'MainCtrl',
+  //       controllerAs: 'main'
+  //     })
+  //     .when('/about', {
+  //       templateUrl: 'views/about.html',
+  //       controller: 'AboutCtrl',
+  //       controllerAs: 'about'
+  //     })
+  //     .otherwise({
+  //       redirectTo: '/'
+  //     });
+  // });
